@@ -5,9 +5,9 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/kamranahmedse/php-shorthand/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/kamranahmedse/php-shorthand/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/kamranahmedse/php-shorthand/v/stable.svg)](https://packagist.org/packages/kamranahmedse/php-shorthand)
 
-> Calculate the set of unique abbreviations for a given set of strings.
+> Calculate the set of unique shorthands for a given set of strings.
 
-Inspired by [ruby's abbrev](http://apidock.com/ruby/Abbrev) module, it let's you calculate the unique set of abbreviations for the given set of words.
+Inspired by [ruby's abbrev](http://apidock.com/ruby/Abbrev) module, it let's you calculate the unique set of shorthands for the given set of words.
 
 ## Installation
 
