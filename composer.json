@@ -19,7 +19,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "KamranAhmed\\Abbrev\\": "src/"
+      "KamranAhmed\\Shorthand\\": "src/"
     }
   },
   "require": {
@@ -30,7 +30,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "KamranAhmed\\Abbrev\\Tests\\": "tests/"
+      "KamranAhmed\\Shorthand\\Tests\\": "tests/"
     }
   }
 }

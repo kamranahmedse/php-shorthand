@@ -1,40 +1,40 @@
 <?php
 
-namespace KamranAhmed\Abbrev;
+namespace KamranAhmed\Shorthand;
 
 use PHPUnit_Framework_TestCase;
 
 /**
- * Class AbbrevTest
+ * Class ShorthandTest
  *
- * @package KamranAhmed\Abbrev
+ * @package KamranAhmed\Shorthand
  */
-class AbbrevTest extends PHPUnit_Framework_TestCase
+class ShorthandTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * @var Abbrev
+     * @var Shorthand
      */
-    protected $abbrev;
+    protected $shorthand;
 
     public function setUp()
     {
         parent::setUp();
 
-        $this->abbrev = new Abbrev();
+        $this->shorthand = new Shorthand();
     }
 
     /**
-     * @dataProvider abbreviationsProvider
+     * @dataProvider shorthandsProvider
      *
      * @param $words
-     * @param $expectedAbbrevs
+     * @param $expectedShorthands
      */
-    public function testCanGenerateAbbreviations($words, $expectedAbbrevs)
+    public function testCanGenerateShorthands($words, $expectedShorthands)
     {
-        $this->abbrev->setWords($words);
-        $abbrevs = $this->abbrev->generate();
+        $this->shorthand->setWords($words);
+        $shorthands = $this->shorthand->generate();
 
-        $this->assertTrue(empty(array_diff_assoc($abbrevs, $expectedAbbrevs)));
+        $this->assertTrue(empty(array_diff_assoc($shorthands, $expectedShorthands)));
     }
 
     /**
@@ -42,14 +42,14 @@ class AbbrevTest extends PHPUnit_Framework_TestCase
      */
     public function testThrowsExceptionForEmptyWords()
     {
-        $this->abbrev->setWords([]);
-        $abbrevs = $this->abbrev->generate();
+        $this->shorthand->setWords([]);
+        $shorthands = $this->shorthand->generate();
     }
 
     /**
      * @return array
      */
-    public function abbreviationsProvider()
+    public function shorthandsProvider()
     {
         return [
             [
@@ -62,6 +62,18 @@ class AbbrevTest extends PHPUnit_Framework_TestCase
                     'cro'    => 'crore',
                     'cror'   => 'crore',
                     'crore'  => 'crore',
+                ],
+            ],
+            [
+                ['crore', 'create', 'crop'],
+                [
+                    'cror'   => 'crore',
+                    'crore'  => 'crore',
+                    'cre'    => 'create',
+                    'crea'   => 'create',
+                    'creat'  => 'create',
+                    'create' => 'create',
+                    'crop'   => 'crop',
                 ],
             ],
             [

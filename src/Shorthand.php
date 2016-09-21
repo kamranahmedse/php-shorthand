@@ -1,15 +1,15 @@
 <?php
 
-namespace KamranAhmed\Abbrev;
+namespace KamranAhmed\Shorthand;
 
 use Exception;
 
 /**
- * Class Abbrev
+ * Class Shorthand
  *
- * @package KamranAhmed\Abbrev
+ * @package KamranAhmed\Shorthand
  */
-class Abbrev
+class Shorthand
 {
     /**
      * @var array
@@ -17,7 +17,7 @@ class Abbrev
     private $words = [];
 
     /**
-     * Abbrev constructor.
+     * Shorthand constructor.
      *
      * @param array $words
      */
@@ -41,14 +41,14 @@ class Abbrev
     public function generate()
     {
         if (empty($this->words)) {
-            throw new Exception('Word(s) are required to generate abbreviations');
+            throw new Exception('Word(s) are required to generate shorthands');
         }
 
         // sort them lexicographically, so that they're $next to their nearest kin
         $words = $this->sortWordsLexico($this->words);
 
-        $abbrevs  = [];
-        $previous = '';
+        $shorthands = [];
+        $previous   = '';
 
         foreach ($words as $counter => $current) {
 
@@ -56,7 +56,7 @@ class Abbrev
             $next = isset($words[$counter + 1]) ? $words[$counter + 1] : "";
 
             // Two matching words found, we cannot make any
-            // unique abbreviations out of this one
+            // unique shorthands out of this one
             if ($current === $next) {
                 continue;
             }
@@ -67,26 +67,26 @@ class Abbrev
             $previous = $current;
 
             // End of the current word has already been reached, just put the whole word
-            // in the abbreviations and continue as it means there was no difference
+            // in the shorthands and continue as it means there was no difference
             // between the current word and the next/previous words
             if ($diffPoint === strlen($current)) {
-                $abbrevs[$current] = $current;
+                $shorthands[$current] = $current;
 
                 continue;
             }
 
-            // Keep generating the abbreviations by creating a substring from the diffing
+            // Keep generating the shorthands by creating a substring from the diffing
             // point to the end i.e. if the diff was found at `cr` in the word `crore`, then
             // generate `cro`, `cror` and `crore`
             while ($diffPoint <= strlen($current)) {
-                $abbrev           = substr($current, 0, $diffPoint);
-                $abbrevs[$abbrev] = $current;
+                $shorthand              = substr($current, 0, $diffPoint);
+                $shorthands[$shorthand] = $current;
 
                 $diffPoint++;
             }
         }
 
-        return $abbrevs;
+        return $shorthands;
     }
 
     /**
