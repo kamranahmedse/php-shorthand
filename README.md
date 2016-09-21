@@ -1,8 +1,8 @@
 # php-shorthand
 
 [![Build Status](https://travis-ci.org/kamranahmedse/php-shorthand.svg?branch=master)](https://travis-ci.org/kamranahmedse/php-shorthand)
-[![Code Coverage](https://scrutinizer-ci.com/g/kamranahmedse/php-shorthand/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/kamranahmedse/php-shorthand/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/kamranahmedse/php-shorthand/v/stable.svg)](https://packagist.org/packages/kamranahmedse/php-shorthand)
+[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/kamranahmedse/php-shorthand.svg?maxAge=2592000)](https://scrutinizer-ci.com/g/kamranahmedse/php-shorthand/?branch=master)
+[![Latest Stable Version](https://img.shields.io/packagist/v/kamranahmedse/php-shorthand.svg?maxAge=2592000)](https://packagist.org/packages/kamranahmedse/php-shorthand)
 
 > Calculate unique shorthands for a given set of strings
 
