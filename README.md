@@ -1,7 +1,6 @@
 # php-shorthand
 
 [![Build Status](https://travis-ci.org/kamranahmedse/php-shorthand.svg?branch=master)](https://travis-ci.org/kamranahmedse/php-shorthand)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kamranahmedse/php-shorthand/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kamranahmedse/php-shorthand/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/kamranahmedse/php-shorthand/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/kamranahmedse/php-shorthand/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/kamranahmedse/php-shorthand/v/stable.svg)](https://packagist.org/packages/kamranahmedse/php-shorthand)
 
