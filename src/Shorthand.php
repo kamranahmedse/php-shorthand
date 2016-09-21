@@ -44,7 +44,7 @@ class Shorthand
             throw new Exception('Word(s) are required to generate shorthands');
         }
 
-        // sort them lexicographically, so that they're $next to their nearest kin
+        // Sort them lexicographically, so that they're next to their nearest kin
         $words = $this->sortWordsLexico($this->words);
 
         $shorthands = [];
