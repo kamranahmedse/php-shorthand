@@ -1,0 +1,36 @@
+{
+  "name": "kamranahmedse/php-abbrev",
+  "type": "library",
+  "description": "Calculate the set of unique abbreviations for a given set of strings.",
+  "keywords": [
+    "abbrev",
+    "ruby-abbrev",
+    "abbreviations",
+    "php-abbrev"
+  ],
+  "homepage": "https://github.com/kamranahmedse/php-abbrev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kamran Ahmed",
+      "homepage": "http://kamranahmed.info",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "KamranAhmed\\Abbrev\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.5"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "KamranAhmed\\Abbrev\\Tests\\": "tests/"
+    }
+  }
+}
