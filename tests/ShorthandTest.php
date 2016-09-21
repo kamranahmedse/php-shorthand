@@ -43,7 +43,7 @@ class ShorthandTest extends PHPUnit_Framework_TestCase
     public function testThrowsExceptionForEmptyWords()
     {
         $this->shorthand->setWords([]);
-        $shorthands = $this->shorthand->generate();
+        $this->shorthand->generate();
     }
 
     /**

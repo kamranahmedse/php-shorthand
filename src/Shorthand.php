@@ -55,8 +55,7 @@ class Shorthand
             // Get the next word
             $next = isset($words[$counter + 1]) ? $words[$counter + 1] : "";
 
-            // Two matching words found, we cannot make any
-            // unique shorthands out of this one
+            // Two matching words found, we cannot make any unique shorthands out of this one
             if ($current === $next) {
                 continue;
             }
@@ -75,9 +74,7 @@ class Shorthand
                 continue;
             }
 
-            // Keep generating the shorthands by creating a substring from the diffing
-            // point to the end i.e. if the diff was found at `cr` in the word `crore`, then
-            // generate `cro`, `cror` and `crore`
+            // Generate the shorthands by creating substring from the diff point to the end
             while ($diffPoint <= strlen($current)) {
                 $shorthand              = substr($current, 0, $diffPoint);
                 $shorthands[$shorthand] = $current;
