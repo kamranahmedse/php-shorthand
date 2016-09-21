@@ -1,12 +1,14 @@
 {
-  "name": "kamranahmedse/php-abbrev",
+  "name": "kamranahmedse/php-shorthand",
   "type": "library",
   "description": "Calculate the set of unique abbreviations for a given set of strings.",
   "keywords": [
     "abbrev",
     "ruby-abbrev",
     "abbreviations",
-    "php-abbrev"
+    "php-abbrev",
+    "php-shorthand",
+    "shorthand"
   ],
   "homepage": "https://github.com/kamranahmedse/php-abbrev",
   "license": "MIT",
