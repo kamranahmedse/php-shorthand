@@ -41,7 +41,7 @@ class Abbrev
     public function generate()
     {
         if (empty($this->words)) {
-            throw new Exception('Words are required to generate abbreviations');
+            throw new Exception('Word(s) are required to generate abbreviations');
         }
 
         // sort them lexicographically, so that they're $next to their nearest kin
@@ -110,9 +110,11 @@ class Abbrev
         for ($diffPoint = 0; $diffPoint < $currentLength; $diffPoint++) {
 
             $currChar = $current[$diffPoint];
+            $nextChar = !empty($next[$diffPoint]) ? $next[$diffPoint] : '';
+            $prevChar = !empty($previous[$diffPoint]) ? $previous[$diffPoint] : '';
 
-            $nextCharMatches = $nextCharMatches && $currChar === $next[$diffPoint];
-            $prevCharMatches = $prevCharMatches && $currChar === $previous[$diffPoint];
+            $nextCharMatches = $nextCharMatches && $currChar === $nextChar;
+            $prevCharMatches = $prevCharMatches && $currChar === $prevChar;
 
             // If neither of the next and previous word characters match,
             // we have found ourselves the point at which both the words differ
