@@ -2,21 +2,21 @@
 
 namespace KamranAhmed\Shorthand;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class ShorthandTest
  *
  * @package KamranAhmed\Shorthand
  */
-class ShorthandTest extends PHPUnit_Framework_TestCase
+class ShorthandTest extends TestCase
 {
     /**
      * @var Shorthand
      */
     protected $shorthand;
 
-    public function setUp()
+    protected function setUp()
     {
         parent::setUp();
 
@@ -34,11 +34,12 @@ class ShorthandTest extends PHPUnit_Framework_TestCase
         $this->shorthand->setWords($words);
         $shorthands = $this->shorthand->generate();
 
-        $this->assertTrue(empty(array_diff_assoc($shorthands, $expectedShorthands)));
+        $this->assertEquals($expectedShorthands, $shorthands);
     }
 
     /**
-     * @expectedException \Exception
+     * @expectedException        \Exception
+     * @expectedExceptionMessage Word(s) are required to generate shorthands
      */
     public function testThrowsExceptionForEmptyWords()
     {

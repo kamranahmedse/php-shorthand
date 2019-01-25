@@ -27,7 +27,9 @@ class Shorthand
     }
 
     /**
-     * @param $words
+     * @param  mixed $words
+     *
+     * @return void
      */
     public function setWords($words)
     {
@@ -36,6 +38,7 @@ class Shorthand
 
     /**
      * @return array
+     *
      * @throws \Exception
      */
     public function generate()
@@ -89,9 +92,9 @@ class Shorthand
     /**
      * Gets the point at which current word differs from the next and previous words
      *
-     * @param $current
-     * @param $next
-     * @param $previous
+     * @param string $current
+     * @param string $next
+     * @param string $previous
      *
      * @return int
      */
@@ -128,7 +131,7 @@ class Shorthand
     /**
      * Sorts the words lexicographically in order to bring the words closer to their kin
      *
-     * @param $words
+     * @param  array $words
      *
      * @return array
      */
